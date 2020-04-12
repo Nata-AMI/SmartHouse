@@ -2,7 +2,7 @@ package smart.netology.ru;
 
 public class Radio {
     private final static int MAX_STATION = 10;
-    private final static int MIN_STATION = 0;
+    private final static int MIN_STATION = 1;
     private final static int MAX_VOLUME = 100;
     private final static int MIN_VOLUME = 0;
     public int currentStation;
@@ -12,7 +12,7 @@ public class Radio {
         if (currentStation < MAX_STATION)
             this.currentStation = currentStation + 1;
         if (currentStation == MAX_STATION)
-            this.currentStation = 0;
+            this.currentStation = 1;
     }
 
     public void prev() {
