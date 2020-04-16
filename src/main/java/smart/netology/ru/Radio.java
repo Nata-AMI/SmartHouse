@@ -37,22 +37,23 @@ public class Radio {
     }
 
     public void setStation(int currentStation) {
-        this.currentStation = currentStation;
-    }
+        if (currentStation <= MAX_STATION && currentStation >= MIN_STATION) {
+            this.currentStation = currentStation;
+        } else {
+            this.currentStation = MIN_STATION;
+        }
 
-    public int getCurrentStation() {
-        return currentStation;
     }
 
     public void setVolume(int volume) {
-        this.volume = volume;
+        if (volume <= MAX_VOLUME && volume >= MIN_VOLUME) {
+            this.volume = volume;
+        } else {
+            this.volume = MIN_VOLUME;
+        }
+    }
     }
 
-    public int getVolume() {
-        return volume;
-    }
-
-}
 
 
 
