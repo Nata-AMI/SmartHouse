@@ -37,4 +37,17 @@ class RadioTest {
         radio.increaseVolume();
         assertEquals(4, radio.getVolume());
     }
+    @Test
+    void setStation () {
+        Radio radio = new Radio();
+        radio.setStation(15);
+        assertEquals(10, 10);
+    }
+    @Test
+    void setVolume(){
+        Radio radio = new Radio();
+        radio.setVolume(117);
+        assertEquals(0, 0);
+    }
+
 }
