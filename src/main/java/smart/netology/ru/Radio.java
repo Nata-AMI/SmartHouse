@@ -8,6 +8,15 @@ public class Radio {
     public int currentStation;
     public int volume;
 
+
+    public int getCurrentStation() {
+        return currentStation;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
     public void next() {
         if (currentStation < MAX_STATION)
             this.currentStation = currentStation + 1;
@@ -25,15 +34,13 @@ public class Radio {
     public void increaseVolume() {
         if (volume < MAX_VOLUME)
             this.volume = volume + 1;
-        if (volume == MAX_VOLUME)
-            this.volume = volume;
+
     }
 
     public void decreaseVolume() {
         if (volume > MIN_VOLUME)
             this.volume = volume - 1;
-        if (volume == MIN_VOLUME)
-            this.volume = volume;
+
     }
 
     public void setStation(int currentStation) {

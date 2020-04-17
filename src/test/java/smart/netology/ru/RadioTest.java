@@ -11,7 +11,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setStation(7);
         radio.next();
-        assertEquals(8, radio.next());
+        assertEquals(8, radio.getCurrentStation());
     }
 
     @Test
@@ -19,7 +19,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setStation(7);
         radio.prev();
-        assertEquals(6, radio.prev());
+        assertEquals(6, radio.getCurrentStation());
     }
 
     @Test
@@ -27,7 +27,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setVolume(7);
         radio.decreaseVolume();
-        assertEquals(6, radio.decreaseVolume());
+        assertEquals(6, radio.getVolume());
     }
 
     @Test
@@ -35,19 +35,19 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setVolume(3);
         radio.increaseVolume();
-        assertEquals(4, radio.increaseVolume());
+        assertEquals(4, radio.getVolume());
     }
     @Test
     void setStation () {
         Radio radio = new Radio();
         radio.setStation(15);
-        assertEquals(10, 10);
+        assertEquals(10, radio.getCurrentStation());
     }
     @Test
     void setVolume(){
         Radio radio = new Radio();
         radio.setVolume(117);
-        assertEquals(0, 0);
+        assertEquals(0, radio.getVolume());
     }
 
 }
