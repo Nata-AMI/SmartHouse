@@ -41,7 +41,7 @@ class RadioTest {
     void setStation () {
         Radio radio = new Radio();
         radio.setStation(15);
-        assertEquals(10, radio.getCurrentStation());
+        assertEquals(0, radio.getCurrentStation());
     }
     @Test
     void setVolume(){
